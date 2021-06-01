@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Lexend Deca";
+    font-size: 16px;
+    background: hsl(0, 0%, 95%);
+    height: 100vh; 
+    color: hsl(0, 0%, 95%); 
+}
+.attribution {
+    color: #333; 
+}
+.container {
+    margin: 10vh 10vw 10vh 10vw;
+    display: flex; 
+    flex-direction: column;
+    border-radius: 0.7rem;
+    max-width: 940px; 
+}
+.info-card {
+    flex-grow: 1;
+    padding: 2rem;
+}
+.info-card.first {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 0.7rem 0.7rem 0 0;
+}
+.info-card.second {
+    background-color: hsl(184, 100%, 22%);
+}
+.info-card.third {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 0 0.7rem 0.7rem;
+}
+.card-title, .info-card p {
+    /* margin-bottom: 3vh; */
+    margin: 3vh 0 4vh 0; 
+}
+.info-card p {
+    margin-bottom: 4vh;
+    line-height: 1.8;
+}
+.card-title {
+    font-family: "Big Shoulders Display";
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+.card-button {
+    text-decoration: none;
+    background: hsl(0, 0%, 95%);
+    padding: .7rem 1.5rem; 
+    border-radius: 2rem; 
+    margin-bottom: 2vh;
+    display: inline-block; 
+    border: 1px solid hsl(0, 0%, 95%);
+    transition: color 250ms, background-color 250ms; 
+}
+.card-button.first {
+    color: hsl(31, 77%, 52%);   
+}
+.card-button.second {
+    color: hsl(184, 100%, 22%);
+}
+.card-button.third {
+    color:  hsl(179, 100%, 13%);
+}
+.card-button:hover,
+.card-button:focus,
+.card-button:active {
+    color: white; 
+    background-color: transparent;
+}
+.attribution {
+    text-align: center; 
+}
+
+/* Adapting it to desktop and tablets */
+@media (min-width: 769px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+    }
+   .container {
+       flex-direction: row;
+   }
+   .info-card.first {
+       border-radius: 0.7rem 0 0 0.7rem; 
+   }
+   .info-card.third {
+       border-radius: 0 0.7rem 0.7rem 0; 
+   }
+}
