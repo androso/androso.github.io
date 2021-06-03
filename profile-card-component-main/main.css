@@ -35,8 +35,6 @@ body {
 .card-top {
     height: 40%;
     background: url(./images/bg-pattern-card.svg);
-    /* display: flex;
-    justify-content: center; */
 }
 
 .card-bottom {
@@ -56,7 +54,6 @@ body {
     width: 96px;
     position: relative;
     top: -48px;
-    /* left: 30px;  */
     border: 2px solid whitesmoke;
 }
 .avatar-info .name {
@@ -74,7 +71,6 @@ body {
     color:hsl(0, 0%, 51%);
 }
 .social-stats {
-    /* background-color: yellowgreen; */
     display: flex;
 }
 .social-stats .stats {
