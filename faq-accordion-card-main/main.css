@@ -20,7 +20,7 @@ body {
 .container {
     background-color: whitesmoke;
     width: 330px;
-    height: 560px;
+    /* height: 560px; */
     margin-top: 40px; 
     border-radius: 20px;
 }
@@ -36,17 +36,62 @@ body {
 }
 .logo-container {
     height: 140px; 
-    /* background-color: red; */
-}
-.faq {
-    height: calc(560px - 130px);
-    /* background-color: teal; */
-    /* text-align: center;  */
 }
 .title {
     text-align: center;
     color: #222;
+    /* height: 35px;  */
 }
 .title h1 {
     font-size: 2.2rem; 
+}
+/* Styling the questions/answer section */
+.questions-section {
+    /* background-color: red; */
+    /* height: calc(560px - 175px); */
+    /* text-align: center; */
+    margin: 0 18px;
+    padding-top: 40px;  
+}
+.question {
+    font-size: .9rem;
+    color: hsl(237, 12%, 33%);
+}
+label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.answer {
+    padding: 15px 20px 0 0;
+    color: hsl(240, 6%, 50%);
+    line-height: 1.5;
+    font-size: .8rem; 
+}
+.question-container {
+    padding: 20px 0; 
+}
+
+hr {
+    border: 1px solid hsl(240, 5%, 91%);
+}
+
+/* Making the show/hide effect */
+input[type="checkbox"] {
+    position: absolute;
+    left: -999rem;
+}
+.answer {
+    display: none;
+    /* visibility: hidden; */
+}
+input[type="checkbox"]:checked ~ .answer {
+    display: block;
+    /* visibility: visible; */
+}
+.arrow {
+    transition: transform 200ms;
+}
+input[type="checkbox"]:checked ~ label > .arrow {
+    transform: rotate(180deg);
 }
