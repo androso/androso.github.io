@@ -25,17 +25,23 @@ body {
     border-radius: 20px;
 }
 .logo-container .logo {
-    position: relative; 
+    position: relative;
+    background-image: url(./images/illustration-woman-online-mobile.svg);
+    width: 266px;
+    height: 196px;
     top: -108px;
     left: 20px;
 }
 .logo-container .shadow-logo {
-    position: absolute; 
-    top: 150px;
-    right: 66px;
+    background-image: url(./images/bg-pattern-mobile.svg);
+    width: 240px;
+    height: 104px;
+    position: relative; 
+    top: -190px;
+    left: 45px;
 }
 .logo-container {
-    height: 140px; 
+    height: 110px; 
 }
 .title {
     text-align: center;
@@ -47,29 +53,29 @@ body {
 }
 /* Styling the questions/answer section */
 .questions-section {
-    /* background-color: red; */
-    /* height: calc(560px - 175px); */
-    /* text-align: center; */
     margin: 0 18px;
     padding-top: 40px;  
 }
 .question {
     font-size: .9rem;
     color: hsl(237, 12%, 33%);
+    transition: font-weight 200ms;
+    
 }
 label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
 }
 .answer {
-    padding: 15px 20px 0 0;
+    padding: 0px 20px 0 0;
     color: hsl(240, 6%, 50%);
     line-height: 1.5;
     font-size: .8rem; 
 }
 .question-container {
-    padding: 20px 0; 
+    margin: 10px 0;
 }
 
 hr {
@@ -83,11 +89,9 @@ input[type="checkbox"] {
 }
 .answer {
     display: none;
-    /* visibility: hidden; */
 }
 input[type="checkbox"]:checked ~ .answer {
     display: block;
-    /* visibility: visible; */
 }
 .arrow {
     transition: transform 200ms;
@@ -95,3 +99,20 @@ input[type="checkbox"]:checked ~ .answer {
 input[type="checkbox"]:checked ~ label > .arrow {
     transform: rotate(180deg);
 }
+input[type="checkbox"]:checked ~ label > .question {
+    font-weight: 700;
+}
+label:hover {
+    cursor:pointer;
+}
+
+/* @media (min-width: 1000px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; 
+        width: 70vw; 
+        max-width: 80vw;
+    } 
+} */
