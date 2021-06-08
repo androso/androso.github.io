@@ -119,10 +119,6 @@ label:hover {
         flex-direction: row;
         justify-content: space-around;
         align-items: center; 
-        /* width: 80vw;
-        height: 55vh;
-        max-width: 960px;
-        max-height: 890px;  */
         width: 960px;
         max-width: 90vw; 
         max-height: 60vh; 
