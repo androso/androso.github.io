@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* width: 100vw; */
+    height: 100vh;
+    padding: 9vw;
+}
+.container {
+    height: 100%;
+    /* width: 100%; */
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "a b"
+        "c c" ; */
+    grid-template: 
+        "a b" 1fr /* You put the height here*/
+        "c c" 1fr / 1fr 1fr /* and the width goes here*/;
+}
+.top-left {
+    /* width: 50%;  */
+    background-color: aquamarine;
+    grid-area: a;
+}
+.top-right {
+    /* width: 50%; */
+    background-color: brown;
+    grid-area: b;
+}
+.bottom {
+    /* width: 100%; */
+    background-color: blueviolet;
+    grid-area: c;
+}
