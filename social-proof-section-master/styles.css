@@ -9,7 +9,7 @@ body {
                 top left no-repeat url("./images/bg-pattern-top-mobile.svg");
     min-height: 100vh;
     font-size: 15px;
-    padding: 60px 30px; 
+    padding: 60px 30px 0 30px; 
     font-family: Spartan;
     display: flex;
     justify-content: center;
@@ -102,10 +102,10 @@ body {
 .avatar-info h3 {
     font-weight: 500;
 }
-@media (min-width: 1024px) {
+
+@media (min-width: 1000px) {
     body {
         background: bottom right no-repeat url("./images/bg-pattern-bottom-desktop.svg"), top left no-repeat url("./images/bg-pattern-top-desktop.svg");
-        min-height: 100vh;
     }
     .container {
         display: grid;
@@ -113,10 +113,10 @@ body {
         "heading rating" 1fr
         "reviews reviews" 1fr / 1fr 1fr
         ;
-        width: 80vw;
+        min-width: 80vw;
         max-width: 1300px;
-        height: 75vh;
-        max-height: 650px;
+        min-height: 75vh;
+        /* max-height: 650px; */
     }
     .heading {
         text-align: left;
@@ -168,10 +168,25 @@ body {
     }
     .review.first {
         align-self: flex-start;
-
     }
     .review.third {
         align-self: flex-end;
-
+    }
+}
+@media (min-width: 1000px) {
+    .container {
+        /* max-width: 80vw; */
+    }
+    .heading {
+        padding-right: 4rem;
+    }
+    .reviews {
+        /* width: 100%; */
+    }
+    .review.first {
+        align-self: center;
+    }
+    .review.third {
+        align-self: center;
     }
 }
