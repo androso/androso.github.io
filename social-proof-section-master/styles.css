@@ -5,7 +5,6 @@
     margin: 0;
 }
 body {
-    /* width: 100vw; */
     height: 100vh;
     font-size: 15px;
     padding: 60px 30px; 
@@ -103,8 +102,9 @@ body {
 }
 @media (min-width: 1024px) {
     body {
-        /* padding: 80px 0; */
-        
+        background: url("./images/bg-pattern-bottom-desktop.svg"), url("./images/bg-pattern-top-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: bottom right, top left;
     }
     .container {
         display: grid;
