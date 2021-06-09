@@ -1,37 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 body {
-    /* width: 100vw; */
     height: 100vh;
     padding: 9vw;
+    font-family: Spartan;
 }
-.container {
+/* .container {
     height: 100%;
-    /* width: 100%; */
+
     display: grid;
-    /* grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
-        "a b"
-        "c c" ; */
     grid-template: 
-        "a b" 1fr /* You put the height here*/
-        "c c" 1fr / 1fr 1fr /* and the width goes here*/;
+        "a b" 1fr 
+        "c c" 1fr / 1fr 1fr 
 }
 .top-left {
-    /* width: 50%;  */
+
     background-color: aquamarine;
     grid-area: a;
 }
 .top-right {
-    /* width: 50%; */
+
     background-color: brown;
     grid-area: b;
 }
 .bottom {
-    /* width: 100%; */
+    
     background-color: blueviolet;
     grid-area: c;
+} */
+.review {
+    background-color: hsl(300, 43%, 22%);
+    width: 350px;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: hsl(300, 24%, 96%);
+}
+.review p {
+    line-height: 1.7;
+}
+.review-head {
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+}
+.avatar {
+    border-radius: 50%;
+    display: inline-block;
+    width: 60px;
+    margin-right: 20px; 
+}
+.avatar-info {
+    display: inline-block;
+}
+.avatar-info p {
+    color: hsl(333, 80%, 67%);
+}
+
+.avatar-info h3 {
+    font-weight: 500;
 }
