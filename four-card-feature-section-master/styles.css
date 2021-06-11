@@ -98,7 +98,6 @@ footer a {
 	transition: transform 0.2s;
 }
 
-/* Desktop queries */
 
 /* Tablet queries */
 @media (min-width: 540px) {
@@ -119,6 +118,8 @@ footer a {
 		display: block;
 	}
 }
+/* Desktop queries */
+
 @media (min-width: 1025px) {
 	.container {
 		display: flex; 
@@ -149,7 +150,4 @@ footer a {
 	.grid-container {
 		margin-bottom: 3vh;
 	}
-}
-@media (min-height: 1000px) {
-	
 }
