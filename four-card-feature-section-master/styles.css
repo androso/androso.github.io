@@ -1,5 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+/* Mobile first */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	font-size: 15px;
+	font-family: Poppins, sans-serif;
+	background-color: #fbfbfa;
+	line-height: 1.8;
+}
+.container {
+	width: 100%;
+}
+header,
+.grid-container,
+footer {
+	padding: 26px;
+}
+header {
+	text-align: center;
+	padding-top: 56px;
+}
+header h2 {
+	font-weight: 200;
+	font-size: 1.6rem;
+	line-height: 1.4;
+	color: hsl(234, 12%, 34%);
+	margin-bottom: 1rem;
+}
+header .highlight {
+	font-weight: 600;
+}
+header h3 {
+	color:hsl(229, 6%, 66%);
+	font-weight: 400;
+	margin-bottom: 35px;
+}
+.grid-container {
+	display: grid;
+	grid-template:
+	"supervisor" 1fr 
+	"builder" 1fr
+	"karma" 1fr
+	"calculator" 1fr / 1fr;
+	gap: 1.3rem;
+}
+.card-element {
+	background-color: #fff;
+	/* background-color: lightcoral; */
+	border-radius: 5px;
+	padding: 1.3rem;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px 15px 17px -1px rgba(158, 160, 168, 0.60);
 
-.heading .highlight {
-    display: block;
+}
+.card-title {
+	color:hsl(234, 12%, 34%);
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+.card-text {
+	color: hsl(229, 6%, 66%);
+	margin-bottom: 2.3rem;
+}
+.card-icon {
+	align-self: flex-end;
+}
+.supervisor {
+	grid-area: supervisor;
+	border-top: 4px solid hsl(180, 62%, 55%); 
+}
+.builder {
+	grid-area: builder;
+	border-top: 4px solid hsl(0, 78%, 62%);
+}
+.karma {
+	grid-area: karma;
+	border-top: 4px solid hsl(34, 97%, 64%);
+}
+.calculator {
+	grid-area: calculator;
+	border-top: 4px solid hsl(212, 86%, 64%);
+}
+footer {
+	text-align: center;
+}
+footer a {
+	text-decoration: none;
+	color:hsl(234, 12%, 34%);
+	font-weight: 600;	
+	display: inline-block;
+	/* transform: translateY(-100px); */
+	transition: transform 0.2s;
+}
+
+/* Desktop queries */
+@media (min-width: 1025px) {
+	footer a:hover {
+		transform: translateY(-8px);
+		padding-bottom: 8px;
+	}
+}
+/* Tablet queries */
+@media (min-width: 540px) {
+	header,
+	.grid-container,
+	footer {
+		width: 100%;
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+	.heading .highlight {
+		display: block;
+	}
 }
