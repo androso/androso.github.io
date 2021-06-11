@@ -94,8 +94,6 @@ footer a {
 	color:hsl(234, 12%, 34%);
 	font-weight: 600;	
 	display: inline-block;
-	/* transform: translateY(-100px); */
-	transition: transform 0.2s;
 }
 
 
@@ -138,8 +136,8 @@ footer a {
 		transform: translateY(50%);
 	}
 	footer a:hover {
-		transform: translateY(-8px);
-		padding-bottom: 8px;
+		text-decoration: underline;
+		color: hsl(229, 6%, 66%);
 	}
 	header h2 {
 		margin-bottom: 1vh;
