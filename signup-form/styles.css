@@ -96,6 +96,9 @@ button {
     text-decoration: underline;
 }
 @media (min-width: 1024px) {
+    body {
+        background: url(./images/bg-intro-desktop.png), hsl(0, 100%, 74%);
+    }
     .content-wrapper {
         display: grid;
         grid-template-areas: 
