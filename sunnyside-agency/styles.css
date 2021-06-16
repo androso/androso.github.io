@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+}
+.page-container {
+    min-height: 100%;
+    width: 100%;
+    background-color: bisque;
+    display: grid;
+    grid-template: 
+    "header header" 65vh 
+    "egg egg" 35vh
+    "egg-info egg-info" 200px
+    "pink pink" 200px
+    "pink-info pink-info" 200px
+    "cherry cherry" 200px
+    "orange orange" 200px
+    "testimonials testimonials" 200px
+    "milk sliced-orange" 200px
+    "ice-cream sugar" 200px
+    "footer footer" 200px / 1fr 1fr;
+    
+}
+
+header {
+    grid-area: header;
+    
+    background: url(./images/mobile/image-header.jpg);
+    background-size: cover;
+}
+.egg {
+    grid-area: egg;
+    
+    background: url(./images/mobile/image-transform.jpg); 
+    background-size: cover;
+}
+.egg-info {
+    grid-area: egg-info;
+    background-color: darkkhaki;
+}
+.pink {
+    grid-area: pink;
+    background: url(./images/mobile/image-stand-out.jpg);
+    background-size: cover;
+}
+.pink-info {
+    grid-area: pink-info;
+    background-color: lightcoral;
+}
+.cherry {
+    grid-area: cherry;
+    background: url(./images/mobile/image-graphic-design.jpg);
+    background-size: cover;
+}
+.orange {
+    grid-area: orange;
+    background: url(./images/mobile/image-photography.jpg);
+    background-size: cover;
+}
+.testimonials {
+    grid-area: testimonials;
+    background-color: lightseagreen;
+}
+.milk {
+    grid-area: milk;
+    background: url(./images/mobile/image-gallery-milkbottles.jpg);
+}
+.sliced-orange {
+    grid-area: sliced-orange;
+    
+    background: url(./images/mobile/image-gallery-orange.jpg);
+}
+.ice-cream {
+    grid-area: ice-cream;
+    background: url(./images/mobile/image-gallery-cone.jpg);
+}
+.sugar {
+    grid-area: sugar;
+    background: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+}
+.page-container div {
+    background-size: cover;
+}
+footer {
+    grid-area: footer;
+    background-color: lightsalmon;
+}
+
+@media (min-width: 1024px) {
+   .page-container {
+    grid-template: 
+    "header header header header" 300px
+    "egg-info egg-info egg egg" 300px
+    "pink-info pink-info pink pink" 300px
+    "cherry cherry orange orange" 300px
+    "testimonials testimonials testimonials testimonials" 300px
+    "milk sliced-orange ice-cream sugar" 300px 
+    "footer footer footer footer" 300px / 1fr 1fr 1fr 1fr;
+   }
+}
