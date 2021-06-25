@@ -67,13 +67,11 @@ header {
 	background: url(./images/mobile/image-graphic-design.jpg) no-repeat center
 		center/cover;
 
-	/* background-size: cover; */
 }
 .orange {
 	grid-area: orange;
 	background: url(./images/mobile/image-photography.jpg) no-repeat center
 		center/cover;
-	/* background-size: cover; */
 }
 .testimonials {
 	grid-area: testimonials;
@@ -148,7 +146,6 @@ span {
 	position: absolute;
 	min-width: 100%;
 	top: 10vh;
-	/* transform: translateX(-98%); */
 	left: 0;
 	padding: 25px 50px;
 	padding-bottom: 40px;
