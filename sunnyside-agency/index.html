@@ -1,58 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles.css">
-  <title>Frontend Mentor | Sunnyside agency landing page</title>
-</head>
-<body>
-  <div class="page-container">
-    <header>
-      <div class="nav">
-        <img src="./images/logo.svg" alt="">
-      </div>
-    </header>
-    <div class="egg-info">
-  
-    </div>
-    <div class="egg">
-      egg
-    </div>
-    <div class="pink">
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="./styles.css" />
+		<title>Frontend Mentor | Sunnyside agency landing page</title>
+	</head>
+	<body>
+		<div class="page-container">
+			<header>
+				<div class="navbar container">
+					<div class="nav">
+						<img src="./images/logo.svg" alt="" />
+						<div class="menuToggle">
+							<input type="checkbox" id="menu" />
 
-    </div>
-    <div class="pink-info">
+							<span></span><span></span><span></span>
 
-    </div>
-    <div class="cherry">
-
-    </div>
-    <div class="orange">
-
-    </div>
-    <div class="testimonials">
-
-    </div>
-    <div class="milk">
-
-    </div>
-    <div class="sliced-orange">
-
-    </div>
-    <div class="ice-cream">
-
-    </div>
-    <div class="sugar">
-
-    </div>
-    <footer>
-
-    </footer>
-  </div>
-  <!-- About
+							<!-- <nav>
+							<a href="#">About</a>
+							<a href="#">Services</a>
+							<a href="#">Projects</a>
+							<a href="#" class="cta">Contact</a>
+						</nav> -->
+							<ul class="menu">
+								<li><a href="#">About</a></li>
+								<li><a href="#">Services</a></li>
+								<li><a href="#">Projects</a></li>
+								<li><a href="#" role="button" class="button">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="hero container">
+				<h1>We are creatives</h1>
+				<img src="./images/icon-arrow-down.svg" alt="" />
+			</div>
+			<div class="egg-info">
+				<h2 class="card-title">Transform your brand</h2>
+				<p class="card-text">
+					We are a full-service creative agency specializing in helping brands
+					grow fast. Engage your clients through compelling visuals that do most
+					of the marketing for you.
+				</p>
+				<a href="#" class="cta">Learn more</a>
+			</div>
+			<div class="egg"></div>
+			<div class="pink"></div>
+			<div class="pink-info">
+				<h2 class="card-title">Stand out to the right audience</h2>
+				<p class="card-text">
+					Using a collaborative formula of designers, researchers,
+					photographers, videographers, and copywriters, we’ll build and extend
+					your brand in digital places.
+				</p>
+				<a href="#" class="cta">Learn more</a>
+			</div>
+			<div class="cherry">
+				<h2 class="card-title">Graphic design</h2>
+				<p class="card-text">
+					Great design makes you memorable. We deliver artwork that underscores
+					your brand message and captures potential clients’ attention.
+				</p>
+			</div>
+			<div class="orange">
+				<h2 class="card-title">Photography</h2>
+				<p class="card-text">
+					Increase your credibility by getting the most stunning, high-quality
+					photos that improve your business image.
+				</p>
+			</div>
+			<div class="testimonials">
+				<h3>CLIENT TESTIMONIALS</h3>
+				<div class="testimonials-container">
+					<div class="first">
+						<img class="avatar" src="./images/image-emily.jpg" alt="" />
+						<p>
+							We put our trust in Sunnyside and they delivered, making sure our
+							needs were met and deadlines were always hit.
+						</p>
+						<p class="avatar-name">Emily R.</p>
+						<p class="role">Marketing Director</p>
+					</div>
+					<div class="second">
+						<img class="avatar" src="./images/image-thomas.jpg" alt="" />
+						<p>
+							Sunnyside’s enthusiasm coupled with their keen interest in our
+							brand’s success made it a satisfying and enjoyable experience.
+						</p>
+						<p class="avatar-name">Thomas S.</p>
+						<p class="role">Chief Operating Officer</p>
+					</div>
+					<div class="third">
+						<img class="avatar" src="./images/image-jennie.jpg" alt="" />
+						<p>
+							Incredible end result! Our sales increased over 400% when we
+							worked with Sunnyside. Highly recommended!
+						</p>
+						<p class="avatar-name">Jennie F.</p>
+						<p class="role">Business Owner</p>
+					</div>
+				</div>
+			</div>
+			<div class="milk"></div>
+			<div class="sliced-orange"></div>
+			<div class="ice-cream"></div>
+			<div class="sugar"></div>
+			<footer>
+				<h4>Sunnyside</h4>
+				<div class="footer-links">
+					<a href="#">About</a>
+					<a href="#">Services</a>
+					<a href="#">Projects</a>
+				</div>
+				<div class="media-icons">
+					<a href="#"><img src="./images/icon-facebook.svg" alt=""></a>
+					<a href="#"><img src="./images/icon-instagram.svg" alt=""></a>
+					<a href="#"><img src="./images/icon-twitter.svg" alt=""></a>
+					<a href="#"><img src="./images/icon-pinterest.svg" alt=""></a>
+				</div>
+			</footer>
+		</div>
+		<!-- About
   Services
   Projects
   Contact
@@ -76,7 +154,7 @@
   Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
 
   Photography
-  Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+  
 
   Client testimonials
 
@@ -101,5 +179,5 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-</body>
+	</body>
 </html>

@@ -1,106 +1,239 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 body {
-    height: 100vh;
+	height: 100vh;
+	font-family: Barlow, Fraunces;
 }
 .page-container {
-    min-height: 100%;
-    width: 100%;
-    background-color: bisque;
-    display: grid;
-    grid-template: 
-    "header header" 65vh 
-    "egg egg" 35vh
-    "egg-info egg-info" 200px
-    "pink pink" 200px
-    "pink-info pink-info" 200px
-    "cherry cherry" 200px
-    "orange orange" 200px
-    "testimonials testimonials" 200px
-    "milk sliced-orange" 200px
-    "ice-cream sugar" 200px
-    "footer footer" 200px / 1fr 1fr;
-    
+	min-height: 100%;
+	width: 100%;
+	background-color: bisque;
+	display: grid;
+	grid-template:
+		"nav nav" 60px
+		"header header" 60vh
+		"egg egg" 33vh
+		"egg-info egg-info" 50vh
+		"pink pink" 38vh
+		"pink-info pink-info" 50vh
+		"cherry cherry" 65vh
+		"orange orange" 65vh
+		"testimonials testimonials" 120vh
+		"milk sliced-orange" 185px
+		"ice-cream sugar" 185px
+		"footer footer" 30vh / 1fr 1fr;
 }
 
 header {
-    grid-area: header;
-    
-    background: url(./images/mobile/image-header.jpg);
-    background-size: cover;
+	grid-area: nav;
+	background: #3EBFFF;
+}
+.hero {
+	grid-area: header;
+	background: url(./images/mobile/image-header.jpg);
 }
 .egg {
-    grid-area: egg;
-    
-    background: url(./images/mobile/image-transform.jpg); 
-    background-size: cover;
+	grid-area: egg;
+	background: url(./images/mobile/image-transform.jpg);
+	background-size: cover;
 }
 .egg-info {
-    grid-area: egg-info;
-    background-color: darkkhaki;
+	grid-area: egg-info;
+	background-color: darkkhaki;
 }
 .pink {
-    grid-area: pink;
-    background: url(./images/mobile/image-stand-out.jpg);
-    background-size: cover;
+	grid-area: pink;
+	background: url(./images/mobile/image-stand-out.jpg);
+	/* background-size: cover; */
 }
 .pink-info {
-    grid-area: pink-info;
-    background-color: lightcoral;
+	grid-area: pink-info;
 }
 .cherry {
-    grid-area: cherry;
-    background: url(./images/mobile/image-graphic-design.jpg);
-    background-size: cover;
+	grid-area: cherry;
+	background: url(./images/mobile/image-graphic-design.jpg);
+
+	/* background-size: cover; */
 }
 .orange {
-    grid-area: orange;
-    background: url(./images/mobile/image-photography.jpg);
-    background-size: cover;
+	grid-area: orange;
+	background: url(./images/mobile/image-photography.jpg);
+	/* background-size: cover; */
 }
 .testimonials {
-    grid-area: testimonials;
-    background-color: lightseagreen;
+	grid-area: testimonials;
+	background-color: lightseagreen;
 }
 .milk {
-    grid-area: milk;
-    background: url(./images/mobile/image-gallery-milkbottles.jpg);
+	grid-area: milk;
+	background: url(./images/mobile/image-gallery-milkbottles.jpg);
 }
 .sliced-orange {
-    grid-area: sliced-orange;
-    
-    background: url(./images/mobile/image-gallery-orange.jpg);
+	grid-area: sliced-orange;
+	background: url(./images/mobile/image-gallery-orange.jpg);
 }
 .ice-cream {
-    grid-area: ice-cream;
-    background: url(./images/mobile/image-gallery-cone.jpg);
+	grid-area: ice-cream;
+	background: url(./images/mobile/image-gallery-cone.jpg);
 }
 .sugar {
-    grid-area: sugar;
-    background: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+	grid-area: sugar;
+	background: url(./images/mobile/image-gallery-sugar-cubes.jpg);
 }
 .page-container div {
-    background-size: cover;
-}
-footer {
-    grid-area: footer;
-    background-color: lightsalmon;
+	background-size: cover;
 }
 
-@media (min-width: 1024px) {
-   .page-container {
-    grid-template: 
-    "header header header header" 300px
-    "egg-info egg-info egg egg" 300px
-    "pink-info pink-info pink pink" 300px
-    "cherry cherry orange orange" 300px
-    "testimonials testimonials testimonials testimonials" 300px
-    "milk sliced-orange ice-cream sugar" 300px 
-    "footer footer footer footer" 300px / 1fr 1fr 1fr 1fr;
-   }
+.container {
+	padding: 0 15px;
 }
+footer {
+	grid-area: footer;
+	background-color: lightsalmon;
+}
+.nav {
+	display: flex;
+	flex-direction: row;
+	min-height: 60px;
+	justify-content: space-between; 
+	position: relative; 
+	align-items: center;
+}
+.nav img {
+	height: 30px;  
+}
+span {
+	display: flex;
+	width: 29px;
+	height: 2px;
+	margin-bottom: 5px;
+	position: relative;
+	background-color: #fff;
+	border-radius: 3px;
+	z-index: 1;
+
+}
+.menu {
+	list-style-type: none;
+	position: absolute; 
+	min-width: 100%;
+	top: 10vh;
+	/* transform: translateX(-98%); */
+	left: 0;
+	padding: 25px 50px; 
+	padding-bottom: 40px; 
+	text-align: center;
+	background-color: whitesmoke;
+	display: none; 
+}
+.menu::before {
+	content: "";
+	display: block;
+    position: absolute;
+    right: 0%;
+    bottom: 100%;
+    width: 1.5rem ;
+    height: 1.5rem;
+    background-color: whitesmoke;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+.menu li {
+	margin-top: 35px; 
+}
+.menu li:first-of-type {
+	margin-top: 10px; 
+}
+
+.menu li a {
+	color: hsl(232, 10%, 55%);
+	text-decoration: none;
+	cursor: pointer;
+	transition: text-decoration 250ms, border 250ms;
+}
+.menu li a:hover,
+.menu li a:focus,
+.menu li a:active {
+	text-decoration: underline;
+}
+.menu .button {
+	text-transform: uppercase;
+	background-color: hsl(51, 100%, 49%);
+	border-radius: 40px;
+	color: #333;
+	padding: 8px 16px; 
+	font-family: Fraunces;
+	font-weight: 700;
+	margin-bottom: 0; 
+	border: 1px solid transparent ;
+}
+.menu .button:hover,
+.menu .button:focus,
+.menu .button:active {
+	text-decoration: none;
+	background-color: white;
+	border: 1px solid hsl(232, 10%, 55%);
+}
+.menuToggle input {
+	position: absolute;
+	right: -2px;
+	top: 15px;
+	width: 35px;
+	height: 35px;
+	z-index: 2;
+	cursor: pointer;
+	opacity: 0;
+}
+.menuToggle input:checked ~ .menu {
+	display: block;
+}
+.hero.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start; 
+	align-items: center; 
+
+}
+.hero.container h1 {
+	margin-top: 80px;
+	color: whitesmoke;
+	text-transform: uppercase;
+	font-family: Fraunces;
+	font-size: 2.5rem;
+	text-align: center; 
+}
+.hero.container img {
+	margin-top: 60px;
+}
+/* @media (min-width: 1024px) {
+	.page-container {
+		grid-template:
+			"header header header header" 300px
+			"egg-info egg-info egg egg" 300px
+			"pink-info pink-info pink pink" 300px
+			"cherry cherry orange orange" 300px
+			"testimonials testimonials testimonials testimonials" 300px
+			"milk sliced-orange ice-cream sugar" 300px
+			"footer footer footer footer" 300px / 1fr 1fr 1fr 1fr;
+	}
+	.nav {
+	}
+	.nav a {
+		padding: 10px 0px;
+		margin-right: 40px;
+		display: inline-block;
+	}
+	.nav .cta {
+		font-family: Fraunces;
+		background-color: #fafafa;
+		border-radius: 22px;
+		color: #333;
+		padding: 12px 20px;
+
+		text-transform: uppercase;
+	}
+} */
