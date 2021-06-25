@@ -26,7 +26,7 @@ body {
 		"testimonials testimonials" 120vh
 		"milk sliced-orange" 185px
 		"ice-cream sugar" 185px
-		"footer footer" 30vh / 1fr 1fr;
+		"footer footer" 300px / 1fr 1fr;
 }
 
 header {
@@ -49,7 +49,6 @@ header {
 .pink {
 	grid-area: pink;
 	background: url(./images/mobile/image-stand-out.jpg);
-	/* background-size: cover; */
 }
 .pink-info {
 	grid-area: pink-info;
@@ -116,7 +115,6 @@ span {
 	background-color: #fff;
 	border-radius: 3px;
 	z-index: 1;
-
 }
 .menu {
 	list-style-type: none;
@@ -209,6 +207,138 @@ span {
 .hero.container img {
 	margin-top: 60px;
 }
+.egg-info,
+.pink-info {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 25px;
+	text-align: center; 
+}
+.card-title {
+	font-family: Fraunces;
+	font-size: 2rem;
+	color:  hsl(212, 27%, 19%);
+	margin-bottom: 30px; 
+}
+.card-text {
+	margin-bottom: 50px;
+	color: hsl(232, 10%, 55%);
+	line-height: 1.8;
+	font-weight: 600;
+}
+.cta {
+	text-transform:uppercase;
+	color:hsl(212, 27%, 19%);
+	font-family: Fraunces;
+	text-decoration: none;
+	position: relative;
+	
+}
+.cta::before {
+	content: "";
+	width: 110%;
+	height: 7px;
+	border-radius: 10px;
+	background: hsla(7, 99%, 70%, 0.3);
+	
+	position: absolute;
+	bottom: 0;
+	left: -5px;
+}
+.orange,
+.cherry {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	text-align: center;
+}
+.cherry .card-text,
+.cherry .card-title {
+	color: hsl(167, 40%, 24%);
+}
+.orange .card-text,
+.orange .card-title {
+	color: hsl(198, 62%, 26%);
+}
+
+.testimonials {
+	background-color: hsl(113, 100%, 95%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center; 
+	padding: 15px;
+}
+.testimonials-container {
+	/* margin-top: 50px; */
+}
+.testimonials h3 {
+	color: hsl(210, 4%, 67%);
+	font-family : Fraunces;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	margin-top: 50px;
+}
+.avatar {
+	border-radius: 50%;
+	height: 50px;
+	margin-top: 50px;
+}
+.testimonials p {
+	color: hsl(213, 9%, 39%);
+	margin-top: 20px;
+	line-height: 1.8;
+}
+.testimonials .avatar-name {
+	font-family: Fraunces;
+	font-weight: 900;
+	color: hsl(212, 27%, 19%);
+	margin-top: 20px;
+}
+.testimonials .role {
+	color: hsl(232, 10%, 55%);
+	margin-top: 0px;
+}
+/* Footer */
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	background-color: hsl(168, 34%, 61%);
+}
+.footer svg {
+	margin-top: 50px;
+	font-size: 2rem;
+	fill: hsl(167, 40%, 24%);
+}
+.footer-links {
+	margin-top: 30px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.footer-links a:hover,
+.footer-links a:active,
+.footer-links a:focus {
+	text-decoration: underline;
+}
+.footer-links a {
+	color: hsl(167, 40%, 30%);
+	text-decoration: none;
+}
+.media-icons {
+	margin-top: 60px;
+
+}
+.media-icons a {
+	margin-left: 20px;
+}
+
 /* @media (min-width: 1024px) {
 	.page-container {
 		grid-template:
