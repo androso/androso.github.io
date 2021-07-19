@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	/* background-image: url("./covers/ewo-era.jpg"); */
+	background-image: url("https://i.pinimg.com/564x/f8/c1/46/f8c14615ff697b915686b041d1d49673.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	backdrop-filter: blur(4px);
+	transition: 0.4s backdrop-filter;
+}
+.unblur__body {
+	backdrop-filter: blur(2px);
+}
+h1 {
+	text-align: center;
+	font-family: Merriweather;
+	font-weight: 900;
+	color: #3f3a3a;
+	margin-top: 40px;
+}
+img {
+	width: 220px;
+}
+.albums-container {
+	margin-top: 40px;
+	min-height: 1200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.album {
+	/* display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around; */
+}
+.album img {
+	filter: blur(1.5px);
+	transition: 0.3s filter;
+	cursor: pointer;
+}
+.album img:hover,
+.album img:focus,
+.album img:active {
+	filter: none;
+}
+
+@media (min-width: 1100px) {
+	body {
+		background: url(./covers/ewo-era.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	h1 {
+		height: 5vh;
+		margin: 0;
+		position: relative;
+		top: 50px;
+	}
+	.albums-container {
+		flex-direction: row;
+		min-height: 95vh;
+		margin: 0;
+	}
+}
