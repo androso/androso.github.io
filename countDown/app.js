@@ -4,13 +4,13 @@ const timerMinsEl = document.querySelector(".timer__mins");
 const timerSecEl = document.querySelector(".timer__sec");
 const endDateInputEl = document.querySelector("#endDateInput");
 
-function countDownTimer(event, date) {
+function countDownTimer(date) {
     const second = 1000, //1000ms in a s
 	minute = second * 60,
 	hour = minute * 60,
 	day = hour * 24;
     let endDate = new Date(date).getTime();
-
+	
 	let interval = setInterval(() => {
 		let startDate = new Date().getTime();
 		if (endDate < startDate || isNaN(endDate)) {
