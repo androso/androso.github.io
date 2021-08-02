@@ -59,7 +59,7 @@ function countDownTimer(event, date) {
 	}, 0);
 }
 function getDate (event) {
-    if (event.code === "Enter" || event.key === 13) {
+    if (event.code === "Enter" || event.key === "Enter") {
         countDownTimer(endDateInputEl.value);
     }
 }
