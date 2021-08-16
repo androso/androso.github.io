@@ -26,7 +26,7 @@ const App = (() => {
 	);
 	const q3 = new Question(
 		"How many members does Twice have?",
-		['10', '8', '4', '9'],
+		["10", "8", "4", "9"],
 		3
 	);
 	console.log(q3.isCorrect("9"));
@@ -64,7 +64,6 @@ const App = (() => {
 	restartButtonEl.addEventListener("click", restart);
 
 	function checkAnswer() {
-
 		// we first get
 		let answer = document.querySelector(".quiz__input:checked + label");
 		if (!answer) {
@@ -72,38 +71,34 @@ const App = (() => {
 			return;
 		}
 		answer = answer.innerText;
-		
-		
-		
+
 		// we then check
 		quiz.guess(answer);
 		replaceQuestion();
-		
-
 	}
 	function replaceQuestion() {
 		const inputCheckedEl = document.querySelector(".quiz__input:checked");
 		const currentQuestion = quiz.getCurrentQuestion();
 		const currentQuestionIndex = quiz.currentIndex + 1;
 		barWidth = barWidth + barWidthIncrease;
-		
+
 		if (quiz.currentIndex === quiz.questions.length) {
 			quizQuestionEl.innerText = "Great Job!";
 			const finalScore = Math.floor((quiz.score * 100) / quiz.questions.length);
-			trackerEl.innerText = `Your final score: ${finalScore}%`
+			trackerEl.innerText = `Your final score: ${finalScore}%`;
 			innerProgressEl.style.width = `${barWidth}%`;
-			taglineEl.innerText = "Completed!"
+			taglineEl.innerText = "Completed!";
 			nextButtonEl.style.display = "none";
 			return;
 		}
-		inputCheckedEl.checked = false;
+
+		if (inputCheckedEl) inputCheckedEl.checked = false;
 		quizQuestionEl.innerText = currentQuestion.question;
 		trackerEl.innerText = `${currentQuestionIndex} of ${nQuestions}`;
 		innerProgressEl.style.width = `${barWidth}%`;
 		choicesEl.map((choice, index) => {
 			choice.innerHTML = `<i></i>${currentQuestion.choices[index]}`;
 		});
-
 	}
 	function restart() {
 		quiz.score = 0;
@@ -112,6 +107,6 @@ const App = (() => {
 		barWidth = 0;
 		innerProgressEl.style.width = `0%`;
 		nextButtonEl.style.display = "block";
-		taglineEl.innerText = "Pick an option below!"
+		taglineEl.innerText = "Pick an option below!";
 	}
 })();
