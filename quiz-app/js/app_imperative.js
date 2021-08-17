@@ -82,7 +82,7 @@ const App = (() => {
 		const currentQuestionIndex = quiz.currentIndex + 1;
 		barWidth = barWidth + barWidthIncrease;
 
-		if (quiz.currentIndex === quiz.questions.length) {
+		if (quiz.hasEnded()) {
 			quizQuestionEl.innerText = "Great Job!";
 			const finalScore = Math.floor((quiz.score * 100) / quiz.questions.length);
 			trackerEl.innerText = `Your final score: ${finalScore}%`;
@@ -92,7 +92,7 @@ const App = (() => {
 			return;
 		}
 
-		if (inputCheckedEl) inputCheckedEl.checked = false;
+		inputCheckedEl.checked = false;
 		quizQuestionEl.innerText = currentQuestion.question;
 		trackerEl.innerText = `${currentQuestionIndex} of ${nQuestions}`;
 		innerProgressEl.style.width = `${barWidth}%`;

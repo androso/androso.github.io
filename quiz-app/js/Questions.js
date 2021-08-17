@@ -5,8 +5,10 @@ export default class Question {
         this.answerKey = answerKey;
     }
     isCorrect (answer) {
-        
-        return this.choices.indexOf(answer) === this.answerKey;
+        // return this.choices.indexOf(answer) === this.answerKey;
+        // if (!answer) {
+        //     alert("You must pick an option from below");
+        // }
+        return answer === this.answerKey;
     }
 }
-

@@ -20,4 +20,8 @@ export default class Quiz {
         }
         this.nextQuestion();
     }
-}
+    reset () {
+        this.score = 0;
+        this.currentIndex = 0;
+    }
+} 
