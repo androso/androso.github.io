@@ -1,0 +1,23 @@
+@import url("https://fonts.google.com/specimen/Rubik");
+
+
+:root {
+    /*---- Primary ----*/
+    --Soft-blue:hsl(231, 69%, 60%); 
+    --Soft-red: hsl(0, 94%, 66%);
+    /*---- Neutral ---- */
+    --Grayish-Blue: hsl(229, 8%, 60%);
+    --Very-Dark-Blue: hsl(229, 31%, 21%);
+    /*---- Typography ----*/
+    --default-font-size: 18px;
+    --main-font-family: Rubik;
+    
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-size: var(--default-font-size);
+}
