@@ -1,6 +1,4 @@
-@import url("https://fonts.google.com/specimen/Rubik");
-
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
 :root {
     /*---- Primary ----*/
     --Soft-blue:hsl(231, 69%, 60%); 
@@ -10,7 +8,7 @@
     --Very-Dark-Blue: hsl(229, 31%, 21%);
     /*---- Typography ----*/
     --default-font-size: 18px;
-    --main-font-family: Rubik;
+    --main-font-family: 'Rubik';
     
 }
 * {
@@ -18,6 +16,310 @@
     padding: 0;
     margin: 0;
 }
-body {
+html {
     font-size: var(--default-font-size);
+    font-family: var(--main-font-family);
 }
+body {
+    height: 100vh;
+}
+.container {
+    max-width: 88%;
+    margin: 0 auto; 
+    padding: 30px 0;
+    text-align: center;
+}
+
+/*---- NAVIGATION ----*/
+.product__nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#menu-icon {
+    margin-right: 5px; 
+}
+/*---- HEADER ----*/
+.product__image {
+    width: 100%;
+    margin-top: 65px; 
+}
+.blue-element {
+    position: absolute;
+    right: 0;
+    top: 190px;
+    width: 290px;
+    height: 160px;
+    background-color: var(--Soft-blue);
+    border-radius: 0 0 0 30%;
+    z-index: -2;
+}
+.product__title {
+    color: var(--Very-Dark-Blue);
+    margin-top: 35px;
+    font-size: 33px; 
+}
+.product__description {
+    margin-top: 18px;
+    color:var(--Grayish-Blue);
+    line-height: 1.5;
+    
+}
+.product__buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.product__buttons button {
+    margin-top: 22px;
+    padding: 10px 12px; 
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px; 
+    box-shadow: 3px 6px 5px 0px #DBDBDB;
+}
+.cta {
+    border: none;
+    background-color: var(--Soft-blue);
+    color: #fafafa;
+    font-size: 1rem;
+}
+.product__button {
+    border: none;
+    background-color: --Grayish-Blue;
+    color: rgb(90, 90, 90); 
+}
+
+/*---- FEATURES SECTION ----*/
+.product__features {
+    margin-top: 85px;
+} 
+.paragraph-block h3 {
+    color: var(--Very-Dark-Blue);
+}
+.paragraph-block p {
+    margin-top: 12px; 
+    line-height: 1.5;
+    color: var(--Grayish-Blue)
+}
+.product__features__navigation {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+}
+hr {
+    border: none;
+    height: 1px;
+    background-color: rgb(211, 211, 211);
+    border-radius: 1px;
+    
+}
+.product__features .feature {
+    position: relative;
+    border: none; 
+    background: none;
+    padding: 0px 0px; 
+    color: var(--Grayish-Blue);
+}
+.feature a {
+    display: inline-block; 
+    padding: 15px 0px;
+}
+.feature + span.active {
+    position: relative;
+    margin: -2px;
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--Soft-red);
+    align-self: center;
+}
+.feature.active {
+    color: #333;
+}
+.product__feature__container {
+    margin-top: 50px;
+}
+.feature__image__container {
+    /* position: relative; */
+}
+.feature__image__container > img {
+    width: 100%;
+}
+.feature-blue-element {
+    position: absolute;
+    left: 0;
+    top: 1170px;
+    width: 320px;
+    height: 215px;
+    background-color: var(--Soft-blue);
+    border-radius: 0 0 31% 0;
+    z-index: -2;
+}
+.feature__info {
+    margin-top: 65px; 
+}
+.feature__button {
+    display: none;
+}
+ /*---- EXTENSIONS ----*/ 
+ .product__extensions {
+     margin-top: 85px; 
+ }
+ .extensions__container {
+     margin-top: 45px; 
+ }
+ .extensions__browser-extension {
+     background-color: #fafafa;
+     box-shadow: 0px 5px 11px 3px #DBDBDB;
+     padding: 40px 0 24px 0px; 
+ }
+ .extensions__browser-extension:nth-of-type(2), 
+ .extensions__browser-extension:nth-of-type(3) {
+     margin-top: 20px;
+ }
+ .extensions__browser-extension .title {
+     margin-top: 25px;
+ }
+ .dots-divisor {
+     margin-top: 35px; 
+     width: 100%;
+ }
+
+.extensions__browser-extension .cta {
+    font-size: 1rem;
+    padding: 15px 35px; 
+    margin-top: 20px; 
+    border-radius: 5px;
+}
+
+/*---- FAQ ----*/
+.product__faq {
+    margin-top: 105px;
+}
+.faq__title {
+    font-size: 1.5rem; 
+}
+.faq__accordion {
+    margin-top: 35px; 
+}
+.faq__question__container {
+    text-align: left; 
+}
+.faq__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0; 
+    border-top: 1px solid var(--Grayish-Blue);
+    color: var(--Very-Dark-Blue);
+    font-weight: 500;
+}
+.faq__question.first {
+    border: none;    
+}
+.faq__details {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s max-height ease;
+}
+.faq__answer {
+    color: var(--Grayish-Blue);
+    margin-bottom: 15px; 
+    font-size: .9rem;
+}
+.faq__button.cta {
+    padding: 13px 19px;
+    border-radius: 5px; 
+    margin-top: 30px; 
+}
+
+/*---- NEWSLETTER ----*/
+.product__newsletter {
+    margin-top: 90px; 
+    background-color: var(--Soft-blue);
+    padding: 55px 20px 40px 20px ; 
+    width: 100vw;
+    color: #fafafa;
+    text-align: center;     
+}
+
+.newsletter__title-upper {
+    text-transform: uppercase;    
+    font-weight: 400;
+    font-size: 0.7rem; 
+    letter-spacing: 4px;
+
+}
+.newsletter__title {
+    margin-top: 12px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.newsletter__title ~ input[type="email"] {
+    margin-top: 20px;
+    display: block; 
+}
+.newsletter__title ~ input[type="email"]::placeholder {
+    color: var(--Grayish-Blue);
+}
+
+.newsletter__title ~ input[type="email"], 
+.newsletter__button {
+    border-radius: 5px;
+    font-size: .9rem;
+    border: none; 
+    width: 100%;
+    padding: 15px 12px; 
+
+}
+.newsletter__button {
+    margin-top: 15px; 
+    background-color: var(--Soft-red);
+}
+
+/*---- FOOTER ----*/
+.footer__container {
+    background-color: var(--Very-Dark-Blue);
+    text-align: center;
+}
+.footer__nav img {
+    color: white; 
+    margin-top: 35px;
+
+}
+.footer__links {
+    margin-top: 30px;
+}
+.footer__link {
+    margin-bottom: 25px; 
+}
+.footer__link:last-of-type {
+    margin-bottom: 0;
+}
+.footer__link a {
+    color: rgb(221, 221, 221);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: 1px;
+}
+.footer__external-links {
+    margin-top: 35px; 
+}
+.footer__external-link.facebook {
+    margin-right: 25px; 
+}
+/*----ATTRIBUTION   */
+.attribution {
+    margin-top: 25px;
+    color: #fafafa; 
+}
+.attribution a {
+    /* text-decoration: none; */
+    color: #ccc; 
+}
+
+/*  TRY TO FIND A WAY TO OPTIMIZE YOUR CODE */
+/* TODO Tablet mode */
+/* TODO Desktop mode */
+

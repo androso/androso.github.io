@@ -15,6 +15,8 @@
 		<div class="container">
 			<header>
 				<nav class="product__nav">
+					<img src="./images/logo-bookmark.svg" alt="" />
+					<img src="./images/icon-hamburger.svg" alt="" id="menu-icon" />
 					<!-- <div class="product__desktop-nav">
         <img src="./images/logo-bookmark.svg" alt="" class="desktop-nav__logo">
         <ul class="desktop-nav__links">
@@ -72,8 +74,15 @@
 						</div>
 					</ul> -->
 				</nav>
-				<div class="product-introduction">
-					<img src="" alt="" class="product__image" />
+				<div class="product__introduction">
+					<div class="product__image__container">
+						<img
+							src="./images/illustration-hero.svg"
+							alt=""
+							class="product__image"
+						/>
+						<div class="blue-element"></div>
+					</div>
 					<h1 class="product__title title">A Simple Bookmark Manager</h1>
 					<p class="product__description description">
 						A clean and simple interface to organize your favourite websites.
@@ -81,7 +90,7 @@
 						free.
 					</p>
 					<div class="product__buttons">
-						<button class="product__button__active cta highlight">
+						<button class="pro1duct__button__active cta highlight">
 							Get it on Chrome
 						</button>
 						<button class="product__button">Get it on Firefox</button>
@@ -99,12 +108,22 @@
 						</p>
 					</div>
 					<div class="product__features__navigation">
-						<button class="feature 1">Simple Bookmarking</button>
-						<button class="feature 2">Speedy Searching</button>
-						<button class="feature 3">Easy Sharing</button>
+						<hr />
+						<div class="feature 1 active"><a>Simple Bookmarking</a></div>
+						<span class="active"></span>
+						<hr />
+						<div class="feature 2"><a>Speedy Searching</a></div>
+						<span></span>
+						<hr />
+						<div class="feature 3"><a>Easy Sharing</a></div>
+						<span></span>
+						<hr />
 					</div>
 					<div class="product__feature__container">
-						<img src="./images/illustration-features-tab-1.svg" alt="" />
+						<div class="feature__image__container">
+							<img src="./images/illustration-features-tab-1.svg" alt="" />
+							<div class="feature-blue-element"></div>
+						</div>
 						<div class="feature__info">
 							<div class="paragraph-block">
 								<h3 class="feature__title title">Bookmark in one click</h3>
@@ -134,8 +153,10 @@
 								alt="browser logo"
 								class="extension-logo"
 							/>
-							<h3 class="title">Add to Chrome</h3>
-							<p class="description">Minimum version 62</p>
+							<div class="paragraph-block">
+								<h3 class="title">Add to Chrome</h3>
+								<p class="description">Minimum version 62</p>
+							</div>
 							<img src="./images/bg-dots.svg" alt="" class="dots-divisor" />
 							<button class="cta">Add & Install Extension</button>
 						</div>
@@ -145,8 +166,10 @@
 								alt="browser logo"
 								class="extension-logo"
 							/>
-							<h3 class="title">Add to Firefox</h3>
-							<p class="description">Minimum version 55</p>
+							<div class="paragraph-block">
+								<h3 class="title">Add to Firefox</h3>
+								<p class="description">Minimum version 55</p>
+							</div>
 							<img src="./images/bg-dots.svg" alt="" class="dots-divisor" />
 							<button class="cta">Add & Install Extension</button>
 						</div>
@@ -156,8 +179,10 @@
 								alt="browser logo"
 								class="extension-logo"
 							/>
-							<h3 class="title">Add to Opera</h3>
-							<p class="description">Minimum version 46</p>
+							<div class="paragraph-block">
+								<h3 class="title">Add to Opera</h3>
+								<p class="description">Minimum version 46</p>
+							</div>
 							<img src="./images/bg-dots.svg" alt="" class="dots-divisor" />
 							<button class="cta">Add & Install Extension</button>
 						</div>
@@ -173,18 +198,20 @@
 					</div>
 					<div class="faq__accordion">
 						<div class="faq__question__container">
-							<div class="faq__question">
+							<div class="faq__question first">
 								What is Bookmark?<img
 									src="./images/icon-arrow.svg"
 									alt=""
 									class="arrow open"
 								/>
 							</div>
-							<p class="faq__answer">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-								tincidunt justo eget ultricies fringilla. Phasellus blandit
-								ipsum quis quam ornare mattis.
-							</p>
+							<div class="faq__details">
+								<p class="faq__answer">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+									tincidunt justo eget ultricies fringilla. Phasellus blandit
+									ipsum quis quam ornare mattis.
+								</p>
+							</div>
 						</div>
 						<div class="faq__question__container">
 							<div class="faq__question">
@@ -194,91 +221,92 @@
 									class="arrow open"
 								/>
 							</div>
-							<p class="faq__answer">
-								Vivamus luctus eros aliquet convallis ultricies. Mauris augue
-								massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
-								luctus eros aliquet convallis ultricies. Mauris augue massa,
-								ultricies non ligula. Suspendisse imperdie tVivamus luctus eros
-								aliquet convallis ultricies. Mauris augue massa, ultricies non
-								ligula. Suspendisse imperdiet.
-							</p>
+							<div class="faq__details">
+								<p class="faq__answer">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+									tincidunt justo eget ultricies fringilla. Phasellus blandit
+									ipsum quis quam ornare mattis.
+								</p>
+							</div>
 						</div>
 						<div class="faq__question__container">
 							<div class="faq__question">
 								Is there a mobile app?
 								<img src="./images/icon-arrow.svg" alt="" class="arrow open" />
 							</div>
-							<p class="faq__answer">
-								Sed consectetur quam id neque fermentum accumsan. Praesent
-								luctus vestibulum dolor, ut condimentum urna vulputate eget.
-								Cras in ligula quis est pharetra mattis sit amet pharetra purus.
-								Sed sollicitudin ex et ultricies bibendum.
-							</p>
+							<div class="faq__details">
+								<p class="faq__answer">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+									tincidunt justo eget ultricies fringilla. Phasellus blandit
+									ipsum quis quam ornare mattis.
+								</p>
+							</div>
 						</div>
 						<div class="faq__question__container">
-							<div class="faq__question">
+							<div class="faq__question last">
 								What about other Chromium browsers?
 								<img src="./images/icon-arrow.svg" alt="" class="arrow open" />
 							</div>
-							<p class="faq__answer">
-								Integer condimentum ipsum id imperdiet finibus. Vivamus in
-								placerat mi, at euismod dui. Aliquam vitae neque eget nisl
-								gravida pellentesque non ut velit.
-							</p>
+							<div class="faq__details">
+								<p class="faq__answer">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+									tincidunt justo eget ultricies fringilla. Phasellus blandit
+									ipsum quis quam ornare mattis.
+								</p>
+							</div>
 						</div>
 					</div>
 					<button class="faq__button cta">More Info</button>
 				</div>
-				<div class="product__newsletter">
-					<p class="newsletter__title-upper">35,000+ already joined</p>
-					<h5 class="newsletter__title title">
-						Stay up-to-date with what we’re doing
-					</h5>
-					<input type="email" placeholder="Enter your email address" />
-					<button class="newsletter__button cta">Contact Us</button>
-				</div>
 			</main>
-			<footer>
-				<div class="footer__container">
-					<div class="footer__nav">
-						<img src="./images/logo-bookmark.svg" alt="" class="footer__logo" />
-						<ul class="footer__links">
-							<li class="footer__link">
-								<a href="#">Features</a>
-							</li>
-							<li class="footer__link">
-								<a href="#">Pricing</a>
-							</li>
-							<li class="footer__link">
-								<a href="#">Contact</a>
-							</li>
-						</ul>
-					</div>
-					<div class="footer__external-links">
-						<img
-							src="./images/icon-facebook.svg"
-							alt="Facebook"
-							class="footer__external-link"
-						/>
-						<img
-							src="./images/icon-twitter.svg"
-							alt="Twitter"
-							class="footer__external-link"
-						/>
-					</div>
-					<div class="attribution">
-						<p class="attribution">
-							Challenge by
-							<a
-								href="https://www.frontendmentor.io?ref=challenge"
-								target="_blank"
-								>Frontend Mentor</a
-							>. Coded by <a href="https://www.github.com/androso">androso</a>.
-						</p>
-					</div>
-				</div>
-			</footer>
 		</div>
+		<div class="product__newsletter">
+			<p class="newsletter__title-upper">35,000+ already joined</p>
+			<h5 class="newsletter__title title">
+				Stay up-to-date with what we’re doing
+			</h5>
+			<input type="email" placeholder="Enter your email address" />
+			<button class="newsletter__button cta">Contact Us</button>
+		</div>
+		<footer>
+			<div class="footer__container">
+				<div class="footer__nav">
+					<img
+						src="./images/logo-bookmark-white-text.svg"
+						alt=""
+						class="footer__logo"
+					/>
+					<ul class="footer__links">
+						<li class="footer__link">
+							<a href="#">Features</a>
+						</li>
+						<li class="footer__link">
+							<a href="#">Pricing</a>
+						</li>
+						<li class="footer__link">
+							<a href="#">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__external-links">
+					<img
+						src="./images/icon-facebook.svg"
+						alt="Facebook"
+						class="footer__external-link facebook"
+					/>
+					<img
+						src="./images/icon-twitter.svg"
+						alt="Twitter"
+						class="footer__external-link"
+					/>
+				</div>
+				<div class="attribution">
+					<p class="attribution">
+						Coded with &#128150; by <a href="https://www.github.com/androso">androso</a>.
+					</p>
+				</div>
+			</div>
+		</footer>
 		<script src="./js/app.js"></script>
 	</body>
 </html>
