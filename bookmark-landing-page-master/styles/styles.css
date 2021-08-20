@@ -2,9 +2,12 @@
 :root {
     /*---- Primary ----*/
     --Soft-blue:hsl(231, 69%, 60%); 
+    --Stronger-blue: hsl(231, 46%, 37%); 
     --Soft-red: hsl(0, 94%, 66%);
+    --Strong-red: hsl(0, 71%, 60%);
     /*---- Neutral ---- */
-    --Grayish-Blue: hsl(229, 8%, 60%);
+    --Grayish-Blue: hsl(228, 6%, 65%);
+    --Soft-white: #fafafa;
     --Very-Dark-Blue: hsl(229, 31%, 21%);
     /*---- Typography ----*/
     --default-font-size: 18px;
@@ -29,7 +32,6 @@ body {
     padding: 30px 0;
     text-align: center;
 }
-
 /*---- NAVIGATION ----*/
 .product__nav {
     display:flex;
@@ -40,20 +42,26 @@ body {
     margin-right: 5px; 
 }
 /*---- HEADER ----*/
+.product__image__container {
+    position: relative;
+    margin-top: 65px; 
+}
 .product__image {
     width: 100%;
-    margin-top: 65px; 
 }
 .blue-element {
     position: absolute;
-    right: 0;
-    top: 190px;
-    width: 290px;
-    height: 160px;
     background-color: var(--Soft-blue);
-    border-radius: 0 0 0 30%;
     z-index: -2;
 }
+.product__image__container > .blue-element {
+    right: -6vw;
+    top: 4vh; 
+    width: 90%;
+    height: 50vw;
+    border-radius: 0 0 0 31%;
+}
+
 .product__title {
     color: var(--Very-Dark-Blue);
     margin-top: 35px;
@@ -76,17 +84,6 @@ body {
     font-weight: 500;
     border-radius: 5px; 
     box-shadow: 3px 6px 5px 0px #DBDBDB;
-}
-.cta {
-    border: none;
-    background-color: var(--Soft-blue);
-    color: #fafafa;
-    font-size: 1rem;
-}
-.product__button {
-    border: none;
-    background-color: --Grayish-Blue;
-    color: rgb(90, 90, 90); 
 }
 
 /*---- FEATURES SECTION ----*/
@@ -140,20 +137,17 @@ hr {
     margin-top: 50px;
 }
 .feature__image__container {
-    /* position: relative; */
+    position: relative;
 }
 .feature__image__container > img {
     width: 100%;
 }
-.feature-blue-element {
-    position: absolute;
-    left: 0;
-    top: 1170px;
-    width: 320px;
-    height: 215px;
-    background-color: var(--Soft-blue);
+.feature__image__container > .blue-element {
+    left: -6vw;
+    top: 4.5vh; 
+    width: 100%;
+    height: 54vw;
     border-radius: 0 0 31% 0;
-    z-index: -2;
 }
 .feature__info {
     margin-top: 65px; 
@@ -240,7 +234,7 @@ hr {
     padding: 55px 20px 40px 20px ; 
     width: 100vw;
     color: #fafafa;
-    text-align: center;     
+    text-align: center;
 }
 
 .newsletter__title-upper {
@@ -274,7 +268,6 @@ hr {
 }
 .newsletter__button {
     margin-top: 15px; 
-    background-color: var(--Soft-red);
 }
 
 /*---- FOOTER ----*/
@@ -318,6 +311,87 @@ hr {
     /* text-decoration: none; */
     color: #ccc; 
 }
+
+/*---- BUTTONS ----*/
+button {
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+.cta {
+    border: none;
+    background-color: var(--Soft-blue);
+    color: #fafafa;
+    font-size: 1rem;
+    
+}
+.cta:hover,
+.cta:active,
+.cta:focus {
+    background-color: var(--Stronger-blue);
+}
+.cta-gray {
+    border: none;
+    background-color: var(--Soft-white);
+    color: rgb(90, 90, 90); 
+    
+}
+.cta-gray:hover,
+.cta-gray:active,
+.cta-gray:focus {
+    background-color: #e6e6e6;
+}
+.cta-red {
+    background-color: var(--Soft-red);
+    color: var(--Soft-white);
+    
+}
+.cta-red:hover,
+.cta-red:active,
+.cta-red:focus {
+    background-color: var(--Strong-red);
+}
+
+/*---- TABLET QUERIES ----*/
+@media (min-width: 767px) {
+    .product__nav {
+        height: 5vh;
+        max-height: 35px;
+    }
+    .product__nav > img {
+        height: 95%; 
+    }
+    .product__nav #menu-icon {
+        height: 80%
+    }
+    .product__buttons {
+        display: block; 
+    }
+    .product__buttons .cta {
+        margin-right: 10px; 
+    }
+    .product__image__container .product__image,
+    .feature__image__container .feature__image {
+        width: 90%;
+    }
+    .product__image__container > .blue-element  {
+        height: 46vw;
+    }
+    .feature__image__container > .blue-element {
+        height: 48vw;
+        top: 6.3vh;
+    }
+    .newsletter__button,
+    .newsletter__title ~ input[type="email"] {
+        width: 80%; 
+    }
+    .product__newsletter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 /*  TRY TO FIND A WAY TO OPTIMIZE YOUR CODE */
 /* TODO Tablet mode */
