@@ -1,6 +1,6 @@
 export const songsList = [{
     "id": "1",
-    "url": "../../music/01.I-CANT-STOP-ME.mp3",
+    "url": "/music-player/music/01.I-CANT-STOP-ME.mp3",
     "time": "03:25",  
     "title": "I CAN'T STOP ME",
     "artist": "TWICE"
