@@ -1,4 +1,5 @@
-import { renderCustomizeMenu } from "./modules/customize.js"; 
+import { renderCustomizeMenu } from "/modules/customize.js"; 
+import renderCustomizeMenu from "/js/modules/Customise.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
