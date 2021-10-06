@@ -4,4 +4,3 @@ import trackBar from "./modules/track-bar.js";
 // Playlist.init();
 Playlist.init();
 RenderPlayInfo.init();
-// trackBar.render();
