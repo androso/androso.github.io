@@ -1,7 +1,8 @@
-import QuizConstructor from "../utils/Quiz-constructor.js";
-import Question from "../utils/Questions-constructor.js";
+import Quiz from "/quiz-app-v2/js/utils/Quiz-constructor.js";
+import Question from "/quiz-app-v2/js/utils/Questions-constructor.js";
 import GameScreen from "../views/Game-screen.js";
-import { renderCustomizeMenu } from "./customize.js";
+import GameScreen from "/quiz-app-v2/js/views/Game-screen.js";
+import { renderCustomizeMenu } from "/quiz-app-v2/js/modules/Customize.js";
 
 const $appContainer = document.querySelector(".app");
 let quiz;
@@ -66,7 +67,7 @@ const getQuestionsData = async (numberOfQuestions, categoryId, difficulty) => {
 		return new Question(question, allChoices, correctChoice);
 	});
 
-	quiz = new QuizConstructor(questions);
+	quiz = new Quiz(questions);
 	loadHTML();
 	addListeners();
 	renderNewQuestion(quiz);

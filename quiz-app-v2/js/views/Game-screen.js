@@ -1,4 +1,4 @@
-import ViewConstructor from "../utils/ViewConstructor.js";
+import ViewConstructor from "/quiz-app-v2/js/utils/ViewConstructor.js";
 
 export default class extends ViewConstructor {
     constructor () {
