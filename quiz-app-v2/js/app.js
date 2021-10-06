@@ -1,5 +1,5 @@
 import { renderCustomizeMenu } from "/modules/customize.js"; 
-import renderCustomizeMenu from "/js/modules/Customise.js";
+import renderCustomizeMenu from "/quiz-app/js/modules/Customise.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
