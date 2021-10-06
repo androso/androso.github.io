@@ -1,5 +1,5 @@
 import CustomizeMenu from "/quiz-app-v2/js/views/Customize-menu.js";
-// import { renderQuiz } from "/quiz-app-v2/js/modules/uiz.js";
+import { renderQuiz } from "/quiz-app-v2/js/modules/Quiz.js";
 const $appContainer = document.querySelector(".app");
 let $questionsNumberInput;
 let $submitFormButton;

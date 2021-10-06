@@ -3,7 +3,7 @@ import Question from "/quiz-app-v2/js/utils/Questions-constructor.js";
 import GameScreen from "/quiz-app-v2/js/views/Game-screen.js";
 import { renderCustomizeMenu } from "/quiz-app-v2/js/modules/Customize.js";
 
-const $appContainer = document.querySelector(".app");
+const $appContainer = document.querySelector(".app");	
 let quiz;
 let progressBarWidth = 0;
 
